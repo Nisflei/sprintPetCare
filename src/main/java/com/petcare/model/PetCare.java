@@ -2,16 +2,17 @@ package com.petcare.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class PetCare {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // only mysql, below is Postgree
-	// @GeneratedValue(generator = "increment")
-	// @GenericGenerator(name = "increment", strategy = "increment")
+	// @GeneratedValue(strategy = GenerationType.IDENTITY) // only mysql, below is Postgree
+	@GeneratedValue(generator = "increment")
+	@GenericGenerator(name = "increment", strategy = "increment")
 	private Long id;
 	private String solicitante;
 	private String soliContato;
