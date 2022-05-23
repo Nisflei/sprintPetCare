@@ -18,6 +18,7 @@
 				<th scope="col"> Descrição </th>
 				<th scope="col"> Localização </th>
 				<th scope="col"> Status </th>
+				<th scope="col"> Ação </th>
 			</tr>
 		</thead>
 		<tbody>
@@ -29,6 +30,10 @@
 				<td th:text="${pet.descricao}"> Descricao </td>
 				<td th:text="${pet.localizacao}"> Localização </td>
 				<td th:text="${pet.status}"> Status </td>
+				<td> <a th:href="@{'/update/'+ ${pet.id} + '/Procurando'}" class="btn btn-outline-warning">Procurar </a>
+				     <a th:href="@{'/update/'+ ${pet.id} + '/Resgatado'}" class="btn btn-outline-success">Resgatar </a>
+					 <a th:href="@{'/update/'+ ${pet.id} + '/NaoLocalizado'}" class="btn btn-outline-danger">Não Local.</a> 	     
+				 </td>
 			</tr>
 		</tbody>
 	
