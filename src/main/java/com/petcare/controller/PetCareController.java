@@ -64,12 +64,12 @@ public class PetCareController {
 	public String index(Model request) {
 		List<PetCare> lista = petcareRepository.findAll();
 		request.addAttribute("listaDados", lista);	
-		return "/anipat-master/index";
+		return "anipat-master/index";
 	}
 	
 	@GetMapping("/denuncia")
 	public String denuncia() {
-		return "/anipat-master/denuncia";
+		return "anipat-master/denuncia";
 	}
 	
 	@PostMapping("/denunciaNovo")
